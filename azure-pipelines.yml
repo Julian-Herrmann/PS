@@ -8,8 +8,8 @@ pool:
 
 steps:
   - checkout: self
-
+    path: Übungsaufgaben
   - script: |
-      chmod +x Übungsaufgaben/5.sh
-      Übungsaufgaben/5.sh
+      chmod +x 5.sh
+      5.sh
     displayName: 'Execute 5.sh script'
