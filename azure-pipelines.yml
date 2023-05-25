@@ -10,6 +10,6 @@ steps:
   - checkout: self
     path: Übungsaufgaben
   - script: |
-      chmod +x 5.sh
-      5.sh
-    displayName: 'Execute 5.sh script'
+      chmod +x usageStatistics.sh
+      usageStatistics.sh
+    displayName: 'Execute usageStatistics.sh script'
