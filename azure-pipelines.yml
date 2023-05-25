@@ -1,5 +1,7 @@
 trigger:
-- main
+  branches:
+    include:
+      - main
 
 pool:
   vmImage: ubuntu-latest
@@ -10,5 +12,5 @@ steps:
     targetType: 'inline'
     script: |
       # Hier wird das Bash-Skript aus dem Repository ausgeführt
-      bash $(Build.SourcesDirectory)/5.sh
+      bash ./5.sh
   displayName: 'Execute bash script'
