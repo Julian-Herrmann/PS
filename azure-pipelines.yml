@@ -6,10 +6,14 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  scriptPath: 'Übungsaufgaben'  # Hier den Verzeichnispfad anpassen
+
 steps:
   - checkout: self
-    path: Übungsaufgaben
+    path: $(scriptPath)
+
   - script: |
-      chmod +x usageStatistics.sh
-      usageStatistics.sh
-    displayName: 'Execute usageStatistics.sh script'
+      chmod +x $(scriptPath)/5.sh
+      ./$(scriptPath)/5.sh
+    displayName: 'Execute 5.sh script'
