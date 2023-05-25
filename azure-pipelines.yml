@@ -7,10 +7,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- checkout: self
+  displayName: 'Übungsaufgaben'
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
-      # Hier wird das Bash-Skript aus dem Repository ausgeführt
-      bash $(Build.SourcesDirectory)/Übungsaufgaben/5.sh
+      # Hier wird das Bash-Skript aus dem Repository "Übungsaufgaben" im Hauptzweig ausgeführt
+      bash $(Build.SourcesDirectory)/JulianHerrmann/Lernbüro/Repos/Files/5.sh
   displayName: 'Execute bash script'
