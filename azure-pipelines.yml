@@ -10,6 +10,6 @@ steps:
   - checkout: self
 
   - script: |
-      chmod +x Lernbüro/Repos/Files/Übungsaufgaben/5.sh
-      ./Lernbüro/Repos/Files/Übungsaufgaben/5.sh
+      chmod +x Übungsaufgaben/5.sh
+      Übungsaufgaben/5.sh
     displayName: 'Execute 5.sh script'
