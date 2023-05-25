@@ -5,12 +5,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world
-
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
-      # Hier wird das Bash-Skript im angegebenen Verzeichnis ausgeführt
-      bash 'C:/Users/JHER/OneDrive - TecAlliance/Dokumente/BU Data Distribution/5.sh'
+      # Hier wird das Bash-Skript aus dem Repository ausgeführt
+      bash $(Build.SourcesDirectory)/Test/Test
   displayName: 'Execute bash script'
