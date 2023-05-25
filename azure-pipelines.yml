@@ -1,0 +1,16 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Hier wird das Bash-Skript im angegebenen Verzeichnis ausgeführt
+      bash 'C:/Users/JHER/OneDrive - TecAlliance/Dokumente/BU Data Distribution/5.sh'
+  displayName: 'Execute bash script'
