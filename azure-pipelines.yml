@@ -4,17 +4,10 @@ trigger:
       - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
-
-- checkout: self
-  displayName: 'Übungsaufgaben'
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Hier wird das Bash-Skript aus dem Repository "Übungsaufgaben" im Hauptzweig ausgeführt
-      bash JulianHerrmann/Lernbüro/Repos/Files/5.sh
-  displayName: 'Execute bash script'
+  - script: |
+      chmod +x JulianHerrmann/Lernbüro/Repos/Files/Übungsaufgaben/5.sh
+      ./JulianHerrmann/Lernbüro/Repos/Files/Übungsaufgaben/5.sh
+    displayName: 'Execute 5.sh script'
