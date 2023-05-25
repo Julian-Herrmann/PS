@@ -10,5 +10,5 @@ steps:
     targetType: 'inline'
     script: |
       # Hier wird das Bash-Skript aus dem Repository ausgeführt
-      bash $(Build.SourcesDirectory)/Test/Test
+      bash $(Build.SourcesDirectory)/5.sh
   displayName: 'Execute bash script'
